@@ -3,12 +3,12 @@
 session_start();
 
 if (empty($_SESSION["id"])) {
-    header("Location: inicio.php");
+    header("Location: /inicio.php");
 }
 // Obtener el ID de la factura de la URL
 $id = (isset($_GET['id'])) ? $_GET['id'] : '0';
 
-include_once 'config/configx.php';
+include_once '/app/config/configx.php';
 
 try {
     // Consulta SQL para obtener los datos de la factura
@@ -39,7 +39,7 @@ try {
             }
 
             // Crear el PDF y generar la factura con los datos recuperados...
-            require('libreria/fpdf.php');
+            require('/app/libreria/fpdf.php');
 
             class PDF extends FPDF
             {

@@ -8,7 +8,7 @@ if (isset($_POST["btnIngresar"])) {
         $nombre_usuario = $_POST["nombre_usuario"];
         $contrasena = $_POST["contrasena"];
 
-        include_once 'config/configx.php'; // Asegúrate de que config.php se incluya solo una vez
+        include_once '/app/config/configx.php'; 
 
         $sql = $conexion->query("SELECT * FROM usuarios WHERE nombre_usuario = '$nombre_usuario' AND contrasena = '$contrasena'");
         
@@ -17,7 +17,7 @@ if (isset($_POST["btnIngresar"])) {
             $_SESSION["id"]=$datos->id;
             $_SESSION["nombre_usuario"]=$datos->nombre;
 
-            header("Location: factura.php");
+            header("Location: /factura.php");
             exit();
 
         } else {

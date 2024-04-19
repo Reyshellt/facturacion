@@ -3,10 +3,10 @@
 session_start();
 
     if (empty($_SESSION["id"])) {
-        header("Location: inicio.php");
+        header("Location: /inicio.php");
     }
 
-include_once 'config/configx.php';
+include_once '/app/config/configx.php';
 
 if($_POST){
     
@@ -59,8 +59,8 @@ $conexion->close();
     <div class="container">
         <nav class=" navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="factura.php">Facturacion</a>
-                <a class="btn btn-primary" href="config/cerrarSession.php" role="button">Salir</a>
+                <a class="navbar-brand" href="/factura.php">Facturacion</a>
+                <a class="btn btn-primary" href="/config/cerrarSession.php" role="button">Salir</a>
             
             </div>
         </nav>

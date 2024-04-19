@@ -3,12 +3,12 @@
     session_start();
 
     if (empty($_SESSION["id"])) {
-        header("Location: inicio.php");
+        header("Location: /inicio.php");
     }
 
     function mostrarFacturas() {
 
-    include_once 'config/configx.php';
+    include_once '/app/config/configx.php';
 
     // Consulta SQL para obtener las facturas
     $query = "SELECT id, fecha, nombre_cliente, total FROM facturas";
@@ -52,8 +52,8 @@
     <div class="container">
         <nav class=" navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="factura.php">Facturacion</a>
-                <a class="btn btn-primary" href="config/cerrarSession.php" role="button">Salir</a>
+                <a class="navbar-brand" href="/factura.php">Facturacion</a>
+                <a class="btn btn-primary" href="/config/cerrarSession.php" role="button">Salir</a>
             
             </div>
         </nav>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
@@ -16,7 +16,7 @@
 
                 <?php 
                     
-                    include_once "/app/config/controladorLogin.php";
+                    include_once "config/controladorLogin.php";
                 ?>
 
                 <div class="bg-white shadow rounded">
@@ -61,7 +61,7 @@
                             <div class="form-right h-100 bg-primary text-white text-center pt-5">
                                 <i class="bi bi-bootstrap"></i>
                                 <h2 class="fs-1">Welcome Back!!!</h2>
-                                <img src="/img/imgreport.svg" alt="" width="75%" height="75%">
+                                <img src="img/imgreport.svg" alt="" width="75%" height="75%">
                             </div>
                         </div>
                     </div>

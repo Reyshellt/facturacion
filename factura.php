@@ -3,12 +3,12 @@
     session_start();
 
     if (empty($_SESSION["id"])) {
-        header("Location: /inicio.php");
+        header("Location: index.php");
     }
 
     function mostrarFacturas() {
 
-    include_once '/app/config/configx.php';
+    include_once 'config/configx.php';
 
     // Consulta SQL para obtener las facturas
     $query = "SELECT id, fecha, nombre_cliente, total FROM facturas";
